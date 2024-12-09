@@ -1,0 +1,22 @@
+$wrapper-width-num: 1440;
+$wrapper-width: #{$wrapper-width-num}px;
+
+@mixin flex-starts {
+  @media screen and (max-width: $wrapper-width) {
+    @content;
+  }
+}
+
+@mixin pc {
+  // width: 768px以上なら適用（767pxなら適用されない）
+  @media (width >= 768px) {
+    @content;
+  }
+}
+
+@mixin sp {
+    // width: 769pxまで適用（770pxからは変化）
+  @media screen and (width <=769px) {
+    @content;
+  }
+}

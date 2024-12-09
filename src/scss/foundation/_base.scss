@@ -1,0 +1,45 @@
+@use 'sass:math';
+@use "../setting" as s;
+
+html {
+  background: #fff;
+  font-size: 10px;
+  @include s.flex-starts {
+    font-size: math.div(10, s.$wrapper-width-num) * 100vw;
+  }
+  @include s.sp {
+    font-size: math.div(10, 375) * 100vw;
+  }
+}
+
+body {
+  font-size: 1.6rem; // 1600px のとき 16pxのフォントサイズを表示する　→ 800px のとき 8pxのフォントサイズを表示する
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  width: s.$wrapper-width;
+  margin: 0 auto;
+  padding-left: 3.2rem;
+  padding-right: 3.2rem;
+  @include s.flex-starts {
+    width: 100%;
+  }
+  @include s.sp {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.inner {
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  @include s.sp {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

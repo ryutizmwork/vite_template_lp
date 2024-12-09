@@ -1,0 +1,11 @@
+@use "../setting" as s;
+
+header {
+  font-weight: bold;
+  text-align: center;
+  background: #f0f0f0;
+  .wrapper {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}

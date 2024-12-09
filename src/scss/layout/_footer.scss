@@ -1,0 +1,11 @@
+@use "../setting" as s;
+
+footer {
+  background: s.$bg-color;
+  font-size: 1rem;
+  text-align: center;
+  .wrapper {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
