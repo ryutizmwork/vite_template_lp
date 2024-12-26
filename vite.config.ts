@@ -1,10 +1,20 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
+const noAttr = () => {
+  return {
+    name: 'no-attribute',
+    transformIndexHtml(html) {
+      return html.replace(/\s(type="module"|crossorigin(="[^"]*")?)/g, '')
+    }
+  }
+}
 const root = 'src'
 export default defineConfig({
   root: root,
   publicDir: '../public/',
+  plugins: [noAttr()],
+  base: './',
   build: {
     outDir: '../dist', // ビルド成果物の生成先
     rollupOptions: {
@@ -34,11 +44,11 @@ export default defineConfig({
       },
       input: {
         main: resolve(__dirname, root, 'index.html'),
-        about: resolve(__dirname, root, 'about/index.html'),
+        about: resolve(__dirname, root, 'about/index.html')
       }
     }
   },
   css: {
-    devSourcemap: true,
+    devSourcemap: true
   }
 })
