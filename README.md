@@ -6,3 +6,18 @@
 [Visual Studio Code](https://azure.microsoft.com/ja-jp/products/visual-studio-code)を推奨
 ## 依存関係のインストール
 `pnpm install`
+
+## path指定
+### dev
+#### html
+assets/css/style.css
+
+#### CSS, TS
+/assets/images/section_bg.png
+
+### build 
+#### html
+assets/css/style.css
+
+#### CSS, TS
+../images/cta-circle.png
