@@ -13,11 +13,11 @@
 assets/css/style.css
 
 #### CSS, TS
-/assets/images/section_bg.png
+/assets/images/sample.png
 
 ### build 
 #### html
 assets/css/style.css
 
 #### CSS, TS
-../images/cta-circle.png
+../images/sample.png
