@@ -1,5 +1,7 @@
 @use 'sass:math';
-@use "../setting" as s;
+@use '../setting' as s;
+
+$contents-base-width: 1140;
 
 html {
   background: #fff;
@@ -14,6 +16,8 @@ html {
 
 body {
   font-size: 1.6rem; // 1600px のとき 16pxのフォントサイズを表示する　→ 800px のとき 8pxのフォントサイズを表示する
+  color: s.$base-black;
+  font-family: 'Noto Sans JP', serif;
 }
 
 img {
@@ -21,11 +25,51 @@ img {
   height: auto;
 }
 
+h1 {
+  font-size: 4.2rem;
+  font-weight: bold;
+  margin-top: 4rem;
+  line-height: 1.5;
+  text-align: center;
+  margin-inline: auto;
+  @include s.sp {
+    font-size: 1.8rem;
+    line-height: 2;
+    margin-top: 3rem;
+  }
+}
+
+h2 {
+  font-size: 6.8rem;
+  @include s.sp {
+    font-size: 4rem;
+  }
+}
+
+h3 {
+  font-size: 4rem;
+  @include s.sp {
+    font-size: 2rem;
+  }
+}
+
+h4,
+p {
+  font-size: 3rem;
+  @include s.sp {
+    font-size: 1.6rem;
+  }
+}
+
+th {
+  color: s.$base-black;
+}
+
 .wrapper {
   width: s.$wrapper-width;
   margin: 0 auto;
-  padding-left: 3.2rem;
-  padding-right: 3.2rem;
+  padding-inline: math.div((s.$wrapper-width-num - $contents-base-width), 2) *
+    0.1rem;
   @include s.flex-starts {
     width: 100%;
   }
