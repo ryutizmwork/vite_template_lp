@@ -6,6 +6,9 @@ $contents-base-width: 1140;
 html {
   background: #fff;
   font-size: 10px;
+  &::-webkit-scrollbar{
+    display: none;
+  }
   @include s.flex-starts {
     font-size: math.div(10, s.$wrapper-width-num) * 100vw;
   }
